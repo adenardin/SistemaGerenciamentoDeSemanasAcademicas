@@ -34,4 +34,7 @@ public class EventoBO {
 
     public void detalheEvento() {
     }
+
+    public EventoBO(String nomeEvento, String descricaoEvento, Date dataInicioInscricaoEvento, Date dataFimInscricaoEvento, Date dataInicioEvento, Date dataFimEvento, Date dataFimPublicacaoEvento, boolean Status) {
+    }
 }

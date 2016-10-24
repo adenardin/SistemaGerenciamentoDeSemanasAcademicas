@@ -7,4 +7,7 @@ public class SalaBO {
     private static int capacidade;
 
     private static boolean adaptada;
+
+    public SalaBO(String nomeSala, int capacidade, boolean adaptada) {
+    }
 }
