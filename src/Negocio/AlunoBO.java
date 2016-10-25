@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class AlunoBO {
 
-    public String nomeAluno;
-
     public int RA;
+    
+    public String nomeAluno;
 
     public String eMail;
 
@@ -72,13 +72,5 @@ public class AlunoBO {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-    public boolean confirmaSenha() {
-        return false;
-    }
 
-    public PalestraBO consultaPalestrasAssistidas(int codPalestra) {
-        PalestraBO p = new PalestraBO();
-        return p;
-    }
 }
