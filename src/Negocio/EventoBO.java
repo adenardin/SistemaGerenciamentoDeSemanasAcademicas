@@ -4,21 +4,37 @@ import java.util.Date;
 
 public class EventoBO {
 
-    private String nomeEvento;
+    public int codEvento;
+    
+    public String nomeEvento;
 
-    private String descricaoEvento;
+    public String descricaoEvento;
 
-    private Date dataInicioInscricaoEvento;
+    public Date dataInicioInscricaoEvento;
 
-    private Date dataFimInscricaoEvento;
+    public Date dataFimInscricaoEvento;
 
-    private Date dataInicioEvento;
+    public Date dataInicioEvento;
 
-    private Date dataFimEvento;
+    public Date dataFimEvento;
 
-    private Date dataFimPublicacaoEvento;
+    public Date dataFimPublicacaoEvento;
 
-    private boolean Status;
+    public boolean Status;
+
+    public EventoBO(int codEvento, String nomeEvento, String descricaoEvento, Date dataInicioInscricaoEvento, Date dataFimInscricaoEvento, Date dataInicioEvento, Date dataFimEvento, Date dataFimPublicacaoEvento, boolean Status) {
+        this.codEvento = codEvento;
+        this.nomeEvento = nomeEvento;
+        this.descricaoEvento = descricaoEvento;
+        this.dataInicioInscricaoEvento = dataInicioInscricaoEvento;
+        this.dataFimInscricaoEvento = dataFimInscricaoEvento;
+        this.dataInicioEvento = dataInicioEvento;
+        this.dataFimEvento = dataFimEvento;
+        this.dataFimPublicacaoEvento = dataFimPublicacaoEvento;
+        this.Status = Status;
+    }
+    
+        
 
     public EventoBO getPeriodoExecucao() {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -37,4 +53,69 @@ public class EventoBO {
 
     public EventoBO(String nomeEvento, String descricaoEvento, Date dataInicioInscricaoEvento, Date dataFimInscricaoEvento, Date dataInicioEvento, Date dataFimEvento, Date dataFimPublicacaoEvento, boolean Status) {
     }
+
+    public int getCodEvento() {
+        return codEvento;
+    }
+
+    public void setCodEvento(int codEvento) {
+        this.codEvento = codEvento;
+    }
+
+    public void setNomeEvento(String nomeEvento) {
+        this.nomeEvento = nomeEvento;
+    }
+
+    public String getDescricaoEvento() {
+        return descricaoEvento;
+    }
+
+    public void setDescricaoEvento(String descricaoEvento) {
+        this.descricaoEvento = descricaoEvento;
+    }
+
+    public void setDataInicioInscricaoEvento(Date dataInicioInscricaoEvento) {
+        this.dataInicioInscricaoEvento = dataInicioInscricaoEvento;
+    }
+
+    public Date getDataFimInscricaoEvento() {
+        return dataFimInscricaoEvento;
+    }
+
+    public void setDataFimInscricaoEvento(Date dataFimInscricaoEvento) {
+        this.dataFimInscricaoEvento = dataFimInscricaoEvento;
+    }
+
+    public Date getDataInicioEvento() {
+        return dataInicioEvento;
+    }
+
+    public void setDataInicioEvento(Date dataInicioEvento) {
+        this.dataInicioEvento = dataInicioEvento;
+    }
+
+    public Date getDataFimEvento() {
+        return dataFimEvento;
+    }
+
+    public void setDataFimEvento(Date dataFimEvento) {
+        this.dataFimEvento = dataFimEvento;
+    }
+
+    public Date getDataFimPublicacaoEvento() {
+        return dataFimPublicacaoEvento;
+    }
+
+    public void setDataFimPublicacaoEvento(Date dataFimPublicacaoEvento) {
+        this.dataFimPublicacaoEvento = dataFimPublicacaoEvento;
+    }
+
+    public boolean isStatus() {
+        return Status;
+    }
+
+    public void setStatus(boolean Status) {
+        this.Status = Status;
+    }
+
 }
