@@ -5,20 +5,16 @@ import java.util.Date;
 public class PalestraBO {
 
     public int codPalestra;
-
     public String tituloPalestra;
-
     public Date dataPalestra;
-
     public Date horaInicioPalestra;
-
     public Date duracaoPalestra;
-
     public String descricaoPalestra;
-
     public String conteudosPalestra;
-
-    public PalestraBO(int codPalestra, String tituloPalestra, Date dataPalestra, Date horaInicioPalestra, Date duracaoPalestra, String descricaoPalestra, String conteudosPalestra) {
+    private int codPalestrante;
+    
+    //new  PalestraBO(    codPalestra,        tituloPalestra,      dataPalestra,        horaInicioPalestra,        duracaoPalestra,        descricaoPalestra,        conteudosPalestra,     codPalestrante);    
+    public PalestraBO(int codPalestra, String tituloPalestra, Date dataPalestra, Date   horaInicioPalestra, Date   duracaoPalestra, String descricaoPalestra, String conteudosPalestra, int codPalestrante) {
         this.codPalestra = codPalestra;
         this.tituloPalestra = tituloPalestra;
         this.dataPalestra = dataPalestra;
@@ -26,9 +22,18 @@ public class PalestraBO {
         this.duracaoPalestra = duracaoPalestra;
         this.descricaoPalestra = descricaoPalestra;
         this.conteudosPalestra = conteudosPalestra;
+        this.codPalestrante = codPalestrante;
+    }
+
+    public PalestraBO(int codPalestra, String tituloPalestra, Date dataPalestra, Date horaInicioPalestra, Date duracaoPalestra, String descricaoPalestra, String conteudosPalestra) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public int getIntcodigoPalestra() {
+        return this.codPalestra;
+    }
+    
+    public int setIntcodigoPalestra() {
         return this.codPalestra;
     }
 
@@ -48,8 +53,16 @@ public class PalestraBO {
         this.dataPalestra = dataPalestra;
     }
 
+    public int getCodPalestra() {
+        return codPalestra;
+    }
+
+    public void setCodPalestra(int codPalestra) {
+        this.codPalestra = codPalestra;
+    }
+
     public Date getHoraInicioPalestra() {
-        return this.horaInicioPalestra;
+        return horaInicioPalestra;
     }
 
     public void setHoraInicioPalestra(Date horaInicioPalestra) {
@@ -57,12 +70,14 @@ public class PalestraBO {
     }
 
     public Date getDuracaoPalestra() {
-        return this.duracaoPalestra;
+        return duracaoPalestra;
     }
 
     public void setDuracaoPalestra(Date duracaoPalestra) {
         this.duracaoPalestra = duracaoPalestra;
     }
+
+    
 
     public String getDescricaoPalestra() {
         return this.descricaoPalestra;
@@ -94,5 +109,13 @@ public class PalestraBO {
 
     public CertificadoBO gerarCertificado() {
         throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public int getCodPalestrante() {
+        return codPalestrante;
+    }
+
+    public void setCodPalestrante(int codPalestrante) {
+        this.codPalestrante = codPalestrante;
     }
 }

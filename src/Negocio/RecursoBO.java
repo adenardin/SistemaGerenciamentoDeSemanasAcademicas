@@ -1,40 +1,39 @@
 package Negocio;
 
 public class RecursoBO {
-
-    private int codRecurso;
     
-    private String nomeRecurso;
+    private static int codigoRecurso;
 
-    private int quantidadeRecurso;
+    private static String nomeRecurso;
 
-    public RecursoBO(String nomeRecurso, int quantidadeRecurso) {
-        this.nomeRecurso = nomeRecurso;
-        this.quantidadeRecurso = quantidadeRecurso;
+    private static int quantidadeRecurso;
+
+    public RecursoBO(int codigoRecurso, String nomeRecurso, int quantidadeRecurso) {
     }
 
-    public int getQuantidadeRecurso() {
-        return quantidadeRecurso;
+    public static int getCodigoRecurso() {
+        return codigoRecurso;
     }
 
-    public void setQuantidadeRecurso(int quantidadeRecurso) {
-        this.quantidadeRecurso = quantidadeRecurso;
+    public static void setCodigoRecurso(int codigoRecurso) {
+        RecursoBO.codigoRecurso = codigoRecurso;
     }
 
-    public int getCodRecurso() {
-        return codRecurso;
-    }
-
-    public void setCodRecurso(int codRecurso) {
-        this.codRecurso = codRecurso;
-    }
-
-    public String getNomeRecurso() {
+    public static String getNomeRecurso() {
         return nomeRecurso;
     }
 
-    public void setNomeRecurso(String nomeRecurso) {
-        this.nomeRecurso = nomeRecurso;
+    public static void setNomeRecurso(String nomeRecurso) {
+        RecursoBO.nomeRecurso = nomeRecurso;
     }
+
+    public static int getQuantidadeRecurso() {
+        return quantidadeRecurso;
+    }
+
+    public static void setQuantidadeRecurso(int quantidadeRecurso) {
+        RecursoBO.quantidadeRecurso = quantidadeRecurso;
+    }
+    
     
 }

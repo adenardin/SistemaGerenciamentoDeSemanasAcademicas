@@ -9,29 +9,39 @@ import Negocio.AlunoBO;
 import Persistencia.AlunoBD;
 import Visao.AlunoIO;
 import Visao.Teclado;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
- * @author faculdade.ads
+ * @author ronaima
  */
 public class AlunoCL {
     public  static boolean newAluno(){
-        AlunoBO c = AlunoIO.getInstance();
+        AlunoBO c = null;
+        try {
+            c = AlunoIO.getInstance();
+        } catch (ParseException ex) {
+            Logger.getLogger(AlunoCL.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return AlunoBD.save(c);
     }
+    
 //    public  static  void showAluno(){
 //        AlunoIO.printList(AlunoBD.getAll());
 //    }
+    
     public  static  ArrayList<AlunoBO> showAluno(){
         return AlunoBD.getAll();
     }
     
     
     
-    public static AlunoBO findAlunoCodigo(int RA){
-        AlunoBO c= AlunoBD.findAlunoCodigo(RA);
-            return a;
+    public static AlunoBO findAlunoRa(int RA){
+        AlunoBO c= AlunoBD.findAlunoRa(RA);
+            return c;
 //        if(c != null){
 //            AlunoIO.printAluno(c);
 //            }
@@ -40,35 +50,26 @@ public class AlunoCL {
 //            }
     }
     
-    public static AlunoBO findAlunoNome(String nomeAluno){
-        AlunoBO a = AlunoBD.findAlunoNome(nomeAluno);
-            return a;
+    public static AlunoBO findAlunoNome(String nom){
+        AlunoBO c= AlunoBD.findAlunoNome(nom);
+            return c;
 //        if(c != null){
-//            AlunoIO.printAluno(c);
+//            ClienteIO.printCliente(c);
 //            }
 //            else{//Depóis trocar por exceção
 //            System.out.println("não encontrado");
 //            }
     }    
     
-    public static void findAlunoRenda(double renda, int opcao){
-        ArrayList<AlunoBO>resposta = new ArrayList();
-        resposta = AlunoBD.findAlunoRenda(renda, opcao);
-        if(resposta != null){
-            AlunoIO.printList(resposta);
-        }
-        else{
-            System.out.println("Não encontrado.");
-        }
-    }
+   
     
     public static boolean deleteAluno(int RA){
         return AlunoBD.delete(RA);
     }
     
-    public static boolean updateAluno(AlunoBO a){
-        //AlunoBO c= AlunoIO.getInstance();
-        return AlunoBD.update(a);
+    public static boolean updateAluno(AlunoBO c){
+        //ClienteBO c= ClienteIO.getInstance();
+        return AlunoBD.update(c);
     }
 
     public static AlunoBO chooseAluno(){
@@ -78,7 +79,7 @@ public class AlunoCL {
         do{
             System.out.println("RA: ");
             RABusca = Teclado.lerInt();
-            Aluno = AlunoBD.findAlunoCodigo(RABusca);
+            Aluno = AlunoBD.findAlunoRa(RABusca);
             if(Aluno != null){
                 System.out.println(Aluno.getNomeAluno());
                 System.out.println("confirma? s/n ");
@@ -91,17 +92,9 @@ public class AlunoCL {
         }
         while(!(confirmacao.equalsIgnoreCase("S")));
         return Aluno;
-    }
-    
-    public static int getAlunoRendaMaisAlta(){
-        return AlunoBD.getAlunoRendaMaisAlta();
-    }
-    public static double getAlunoRendaMedia(){
-        return AlunoBD.AlunoRendaMedia();    
-    }   
-    
+    }    
+        
     public static boolean newAluno(AlunoBO Aluno){
         return AlunoBD.save(Aluno);
     }
-    
 }

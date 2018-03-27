@@ -4,18 +4,13 @@ import java.util.Date;
 
 public class AlunoBO {
 
-    public int RA;
-    
     public String nomeAluno;
-
+    public int RA;
     public String eMail;
-
     public String telefone;
-
     public Date dataNascimento;
-
     public String senha;
-
+    
     public AlunoBO(String nomeAluno, int RA, String eMail, String telefone, Date dataNascimento, String senha) {
         this.nomeAluno = nomeAluno;
         this.RA = RA;
@@ -72,5 +67,13 @@ public class AlunoBO {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+    
+    public boolean confirmaSenha() {
+        return false;
+    }
 
+//    public PalestraBO consultaPalestrasAssistidas(int codPalestra) {
+//        PalestraBO p = new PalestraBO();
+//        return p;
+//    }
 }

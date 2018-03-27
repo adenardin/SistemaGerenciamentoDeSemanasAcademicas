@@ -4,26 +4,20 @@ import java.util.Date;
 
 public class ColaboradorBO {
 
-    public int codColaborador;
-    
+    public int codColaborador;    
     public String nomeColaborador;
-
     public String eMailColaborador;
-
     public String telefoneColaborador;
-
-    public Date dataNascimencolaborador;
-
+    public Date dataNascimentoColaborador;
     public String senhaColaborador;
-
     public boolean statusColaborador;
 
-    public ColaboradorBO(int codColaborador, String nomeColaborador, String eMailColaborador, String telefoneColaborador, Date dataNascimencolaborador, String senhaColaborador, boolean statusColaborador) {
+    public ColaboradorBO(int codColaborador, String nomeColaborador, String eMailColaborador, String telefoneColaborador, Date dataNascimentoColaborador, String senhaColaborador, boolean statusColaborador) {
         this.codColaborador = codColaborador;
         this.nomeColaborador = nomeColaborador;
         this.eMailColaborador = eMailColaborador;
         this.telefoneColaborador = telefoneColaborador;
-        this.dataNascimencolaborador = dataNascimencolaborador;
+        this.dataNascimentoColaborador = dataNascimentoColaborador;
         this.senhaColaborador = senhaColaborador;
         this.statusColaborador = statusColaborador;
     }
@@ -61,11 +55,11 @@ public class ColaboradorBO {
     }
 
     public Date getDataNascimencolaborador() {
-        return dataNascimencolaborador;
+        return dataNascimentoColaborador;
     }
 
     public void setDataNascimencolaborador(Date dataNascimencolaborador) {
-        this.dataNascimencolaborador = dataNascimencolaborador;
+        this.dataNascimentoColaborador = dataNascimencolaborador;
     }
 
     public String getSenhaColaborador() {
@@ -75,13 +69,17 @@ public class ColaboradorBO {
     public void setSenhaColaborador(String senhaColaborador) {
         this.senhaColaborador = senhaColaborador;
     }
-
-    public boolean isStatusColaborador() {
+    
+    public boolean getStatusColaborador() {
         return statusColaborador;
     }
 
     public void setStatusColaborador(boolean statusColaborador) {
         this.statusColaborador = statusColaborador;
     }
+
+    
+
+    
     
 }

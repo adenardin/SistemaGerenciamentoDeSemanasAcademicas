@@ -2,32 +2,45 @@ package Negocio;
 
 public class ConfirmacaoPresencaBO {
 
-    private PalestraBO codigoPalestra;
+    private int codigoEvento;
+    private int RA;
+    private int Cod;
 
-    private AlunoBO RA;
-
-    public ConfirmacaoPresencaBO(PalestraBO codigoPalestra, AlunoBO RA) {
-        this.codigoPalestra = codigoPalestra;
+    public ConfirmacaoPresencaBO(int codigoEvento, int RA, int Cod) {
+        this.codigoEvento = codigoEvento;
         this.RA = RA;
+        this.Cod = Cod;
     }
 
-    public AlunoBO getRA() {
+    public int getCodigoEvento() {
+        return codigoEvento;
+    }
+
+    public void setCodigoEvento(int codigoEvento) {
+        this.codigoEvento = codigoEvento;
+    }
+
+    public int getRA() {
         return RA;
     }
 
-    public void setRA(AlunoBO RA) {
+    public void setRA(int RA) {
         this.RA = RA;
     }
 
-    public PalestraBO getCodigoPalestra() {
-        return codigoPalestra;
+    public int getCod() {
+        return Cod;
     }
 
-    public void setCodigoPalestra(PalestraBO codigoPalestra) {
-        this.codigoPalestra = codigoPalestra;
+    public void setCod(int Cod) {
+        this.Cod = Cod;
     }
+
+    public Object getCodEvento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
-//    public boolean processaConfirmacaoPresencaBO(){
-//        return false;
-//    }
+    
+    
 }

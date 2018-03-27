@@ -1,36 +1,29 @@
+//SALABO OK
 package Negocio;
 
 public class SalaBO {
-
-    private int codSala;
+    
+    private int codigoSala;
     
     private String nomeSala;
 
-    private int capacidadeSala;
+    private int capacidade;
 
-    private boolean adaptadaSala;
+    private String adaptada;
 
-    public SalaBO(int codSala, String nomeSala, int capacidadeSala, boolean adaptadaSala) {
-        this.codSala = codSala;
+    public SalaBO(int codigoSala, String nomeSala, int capacidade, String adaptada) {
+        this.codigoSala = codigoSala;
         this.nomeSala = nomeSala;
-        this.capacidadeSala = capacidadeSala;
-        this.adaptadaSala = adaptadaSala;
+        this.capacidade = capacidade;
+        this.adaptada = adaptada;                
     }
 
-    public boolean isAdaptadaSala() {
-        return adaptadaSala;
+    public int getCodigoSala() {
+        return codigoSala;
     }
 
-    public void setAdaptadaSala(boolean adaptadaSala) {
-        this.adaptadaSala = adaptadaSala;
-    }
-
-    public int getCodSala() {
-        return codSala;
-    }
-
-    public void setCodSala(int codSala) {
-        this.codSala = codSala;
+    public void setCodigoSala(int codigoSala) {
+        this.codigoSala = codigoSala;
     }
 
     public String getNomeSala() {
@@ -41,12 +34,19 @@ public class SalaBO {
         this.nomeSala = nomeSala;
     }
 
-    public int getCapacidadeSala() {
-        return capacidadeSala;
+    public int getCapacidade() {
+        return capacidade;
     }
 
-    public void setCapacidadeSala(int capacidadeSala) {
-        this.capacidadeSala = capacidadeSala;
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
     }
 
+    public String getAdaptada() {
+        return adaptada;
+    }
+
+    public void setAdaptada(String adaptada) {
+        this.adaptada = adaptada;
+    }    
 }
